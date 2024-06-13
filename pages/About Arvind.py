@@ -11,9 +11,9 @@ with col1:
              psum lorem  psum lorem  psum lorem  psum lorem  psum lorem ')
     
     url = 'https://www.linkedin.com/in/arvindna/'
-    st.markdown(f"Feel free to reach out to me on LinkedIn")
+    st.markdown(f"Feel free to reach out : ")
     # st.markdown(f"###### 🔗 Linkedin: [link](%s)"% url)
-    st.markdown(url)
+    st.markdown(f"###### 🔗 Linkedin: {url}")
     
 with col3:
     st.image("./img_arv.jpeg", width=360)
