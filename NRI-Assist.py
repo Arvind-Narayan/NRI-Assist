@@ -10,7 +10,7 @@ from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
 
 
-print('testaksfhhjkasdf')
+st.write('testaksfhhjkasdf')
 
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
