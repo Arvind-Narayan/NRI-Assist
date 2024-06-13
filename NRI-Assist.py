@@ -8,7 +8,8 @@ from httpx_oauth.clients.google import GoogleOAuth2
 from utils import get_logged_in_user_email, remove_citations, update_db
 from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
-import os
+
+st.set_page_config(page_title="NRI-Assist", page_icon="🇮🇳")
 
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
@@ -83,7 +84,7 @@ with st.sidebar:
 
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
-st.write("I am Arvind's AI agent.")
+st.write("I am Arvind's AI agent. 🤖")
 st.write("You can talk to me as if you were talking to Arvind himself. \
          Feel free to ask me questions about returning to India.")
 
