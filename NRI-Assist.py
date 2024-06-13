@@ -21,7 +21,7 @@ except ValueError as e:
 # Initialize Google OAuth2 client
 client_id = st.secrets["client_id"]
 client_secret = st.secrets["client_secret"]
-redirect_url = "http://localhost:8501/"  # Your redirect URL
+redirect_url = "https://nri-assist.streamlit.app/"  # redirect after google login
 
 goa_client = GoogleOAuth2(client_id=client_id, client_secret=client_secret)
 
