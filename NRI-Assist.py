@@ -83,7 +83,7 @@ with st.sidebar:
 
 
 
-st.header("NRI Assist 🇺🇸 🇮🇳") 
+st.title("NRI Assist 🇺🇸 🇮🇳") 
 st.markdown("I am Arvind's **:blue[AI agent]**.\
          Feel free to ask me questions about returning to India. ✨ ")
 st.write('---')
