@@ -11,6 +11,7 @@ from openai.types.beta.threads.text_delta_block import TextDeltaBlock
 import os
 
 print('config test')
+st.write('config test failed')
 
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
