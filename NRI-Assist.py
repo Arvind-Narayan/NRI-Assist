@@ -83,7 +83,8 @@ try:
                 st.session_state.email = ''
                 st.rerun()
 except Exception as e:
-    st.write('exception found ' + str(e))
+    st.write('exception found ')
+    st.write(str(e))
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
 st.write("I am Arvind's AI agent.")
