@@ -87,7 +87,7 @@ st.title("NRI Assist 🇺🇸 👉 🇮🇳")
 st.markdown("I am **Arvind's** :blue[AI] agent.")
 st.markdown("You can talk to me as if you were talking to Arvind himself. \
          Feel free to ask me questions about returning to India.")
-st.subheader(divider = 'rainbow')
+st.subheader('',divider = 'rainbow')
 # st.write('---')
 
 #thread session state
