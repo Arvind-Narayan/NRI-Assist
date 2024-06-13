@@ -86,7 +86,7 @@ with st.sidebar:
 st.header("NRI Assist 🇺🇸 🇮🇳", divider = 'rainbow') 
 st.markdown("I am Arvind's **:blue[AI agent]**.\
          Feel free to ask me questions about returning to India. ✨ ")
-st.write('---')
+
 
 #thread session state
 if "thread_id" not in st.session_state:
