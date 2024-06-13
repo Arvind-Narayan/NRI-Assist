@@ -84,8 +84,8 @@ with st.sidebar:
 
 
 st.header("NRI Assist 🇺🇸 🇮🇳", divider = 'rainbow') 
-st.markdown("I am Arvind's **:blue[AI agent]**.\
-         Feel free to ask me questions about returning to India. ✨ ")
+st.markdown(":blue[I am Arvind's] **:orange[AI agent]**.\
+         :blue[Feel free to ask me questions about returning to India.] ✨ ")
 
 
 #thread session state
