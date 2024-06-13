@@ -56,7 +56,6 @@ try:
             doc_ref = db.collection('users').document(st.session_state.email)
             doc_ref.set(user_info)
 except Exception as e:
-    st.write('exception found')
     print(e)
 
 
@@ -70,19 +69,21 @@ def show_login_button():
 
     get_logged_in_user_email(goa_client, redirect_url)
 
-
-with st.sidebar:
-    if not st.session_state.email:
-        get_logged_in_user_email(goa_client, redirect_url)
+try:
+    with st.sidebar:
         if not st.session_state.email:
-            show_login_button()
+            get_logged_in_user_email(goa_client, redirect_url)
+            if not st.session_state.email:
+                show_login_button()
 
-    if st.session_state.email:
-        # st.write(st.session_state.email)
-        if st.button("Logout", type="primary", key="logout_non_required"):
-            print('button if statement ')
-            st.session_state.email = ''
-            st.rerun()
+        if st.session_state.email:
+            # st.write(st.session_state.email)
+            if st.button("Logout", type="primary", key="logout_non_required"):
+                print('button if statement ')
+                st.session_state.email = ''
+                st.rerun()
+except Exception as e:
+    st.write('exception found')
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
 st.write("I am Arvind's AI agent.")
