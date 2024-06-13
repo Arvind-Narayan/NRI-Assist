@@ -10,9 +10,6 @@ from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
 import os
 
-print('config test')
-st.write('config test failed')
-
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
 cred = credentials.Certificate(fb_creds)
@@ -69,22 +66,21 @@ def show_login_button():
 
     get_logged_in_user_email(goa_client, redirect_url)
 
-try:
-    with st.sidebar:
-        if not st.session_state.email:
-            get_logged_in_user_email(goa_client, redirect_url)
-            if not st.session_state.email:
-                show_login_button()
 
-        if st.session_state.email:
-            # st.write(st.session_state.email)
-            if st.button("Logout", type="primary", key="logout_non_required"):
-                print('button if statement ')
-                st.session_state.email = ''
-                st.rerun()
-except Exception as e:
-    st.write('exception found ')
-    st.write(e)
+with st.sidebar:
+    if not st.session_state.email:
+        get_logged_in_user_email(goa_client, redirect_url)
+        if not st.session_state.email:
+            show_login_button()
+
+    if st.session_state.email:
+        # st.write(st.session_state.email)
+        if st.button("Logout", type="primary", key="logout_non_required"):
+            print('button if statement ')
+            st.session_state.email = ''
+            st.rerun()
+
+
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
 st.write("I am Arvind's AI agent.")
