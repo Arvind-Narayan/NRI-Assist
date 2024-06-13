@@ -84,7 +84,7 @@ with st.sidebar:
 
 
 st.header("NRI Assist 🇺🇸 🇮🇳") 
-st.markdown("I am Arvind's **:blue[AI agent]**. You can talk to me as if you were talking to Arvind himself. \
+st.markdown("I am Arvind's **:blue[AI agent]**.\
          Feel free to ask me questions about returning to India. ✨ ")
 st.write('---')
 
