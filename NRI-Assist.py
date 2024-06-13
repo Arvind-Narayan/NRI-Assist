@@ -10,7 +10,8 @@ from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
 
 # Initialize Firebase app
-cred = credentials.Certificate("nriassist-accac-ba971602e30f.json")
+fb_creds = dict(st.secrets["firebase"]['creds'])
+cred = credentials.Certificate(fb_creds)
 
 try:
     firebase_admin.get_app()
