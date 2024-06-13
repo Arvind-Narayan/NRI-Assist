@@ -127,7 +127,7 @@ if prompt:
         st.stop()
 
     if user_info['msg_count'] >= 7:
-        st.info("Sorry we have reached the token limit. Please reach out to Arvind directly")
+        st.info("Sorry we have reached the token limit. Please reach out to Arvind directly!")
         st.stop()
     
     st.session_state.messages.append({"role": "user", "content": prompt}) # add to state
@@ -146,37 +146,45 @@ if prompt:
         content=prompt
         )
     
-    with st.spinner("Generating response..."): 
-   # Stream the assistant's reply
-        with st.chat_message("assistant"):
-            stream = oai_client.beta.threads.runs.create(
-                thread_id=st.session_state.thread_id,
-                assistant_id=assis_id,
-                stream=True
-                )
-            
-            # Empty container to display the assistant's reply
-            assistant_reply_box = st.empty()
-            
-            # A blank string to store the assistant's reply
-            assistant_reply = ""
+    try:
+        with st.spinner("Generating response..."): 
+    # Stream the assistant's reply
+            with st.chat_message("assistant"):
+                stream = oai_client.beta.threads.runs.create(
+                    thread_id=st.session_state.thread_id,
+                    assistant_id=assis_id,
+                    stream=True
+                    )
+                
+                # Empty container to display the assistant's reply
+                assistant_reply_box = st.empty()
+                
+                # A blank string to store the assistant's reply
+                assistant_reply = ""
 
-            # Iterate through the stream 
-            for event in stream:
-                # Here, we only consider if there's a delta text
-                if isinstance(event, ThreadMessageDelta):
-                    if isinstance(event.data.delta.content[0], TextDeltaBlock):
-                        # empty the container
-                        assistant_reply_box.empty()
-                        # add the new text
-                        partial_reply = event.data.delta.content[0].text.value
-                        assistant_reply += remove_citations(partial_reply)
-                        # display the new text
-                        assistant_reply_box.markdown(assistant_reply)
-            
-            # Once the stream is over, update chat history
-            st.session_state.messages.append({"role": "assistant",
-                                                "content": assistant_reply})
-            
-            update_db(collection = user_collection, role = 'assistant', content = assistant_reply, 
-                      msg_count = user_info['msg_count'])
+                # Iterate through the stream 
+                for event in stream:
+                    # Here, we only consider if there's a delta text
+                    if isinstance(event, ThreadMessageDelta):
+                        if isinstance(event.data.delta.content[0], TextDeltaBlock):
+                            # empty the container
+                            assistant_reply_box.empty()
+                            # add the new text
+                            partial_reply = event.data.delta.content[0].text.value
+                            assistant_reply += remove_citations(partial_reply)
+                            # display the new text
+                            assistant_reply_box.markdown(assistant_reply)
+                
+                if not assistant_reply:
+                    st.info("Sorry we have reached the token limit. Please reach out to Arvind directly!")
+                    st.stop()
+
+                # Once the stream is over, update chat history
+                st.session_state.messages.append({"role": "assistant",
+                                                    "content": assistant_reply})
+                
+                update_db(collection = user_collection, role = 'assistant', content = assistant_reply, 
+                        msg_count = user_info['msg_count'])
+    except:
+        st.info("Sorry we have reached the token limit. Please reach out to Arvind directly!")
+        st.stop()
