@@ -84,12 +84,10 @@ with st.sidebar:
 
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
-st.subheader('', divider='rainbow')
-
-st.write("I am Arvind's :blue[AI] agent. 🤖")
-st.write("You can talk to me as if you were talking to Arvind himself. \
-         Feel free to ask me questions about returning to India.")
-st.write('---')
+st.subheader("I am Arvind's :blue[AI] agent. 🤖")
+st.subheader("You can talk to me as if you were talking to Arvind himself. \
+         Feel free to ask me questions about returning to India.", divider = 'rainbow')
+# st.write('---')
 
 #thread session state
 if "thread_id" not in st.session_state:
