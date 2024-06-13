@@ -40,6 +40,7 @@ def get_logged_in_user_email(client: GoogleOAuth2, redirect_url: str):
         return None
     except Exception as e: 
         print(e)
+        st.write('exception ' + e)
         pass
 
 def update_db(collection, role, content, msg_count):
