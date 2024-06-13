@@ -12,7 +12,6 @@ import os
 
 print('config test')
 st.write('config test failed')
-os.write(1,b'Something was executed.\n')
 
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
