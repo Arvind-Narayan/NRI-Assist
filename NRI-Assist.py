@@ -126,7 +126,7 @@ if prompt:
         st.info("Please login to continue.")
         st.stop()
 
-    if user_info['msg_count'] >= 9:
+    if user_info['msg_count'] >= 7:
         st.info("Sorry we have reached the token limit. Please reach out to Arvind directly")
         st.stop()
     
