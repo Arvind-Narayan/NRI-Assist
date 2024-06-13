@@ -9,6 +9,9 @@ from utils import get_logged_in_user_email, remove_citations, update_db
 from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
 
+
+print('testaksfhhjkasdf')
+
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
 cred = credentials.Certificate(fb_creds)
