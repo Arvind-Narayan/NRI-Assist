@@ -8,9 +8,8 @@ from httpx_oauth.clients.google import GoogleOAuth2
 from utils import get_logged_in_user_email, remove_citations, update_db
 from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
-
 import os
-os.write(1,b'Something was executed.\n')
+
 
 
 # Initialize Firebase app
@@ -55,8 +54,9 @@ try:
             user_info = {'messages': [], 'msg_count': 1}
             doc_ref = db.collection('users').document(st.session_state.email)
             doc_ref.set(user_info)
-except Exception as e: 
-        print(e)
+except Exception as e:
+    os.write(1,e)
+    print(e)
 
 
 def show_login_button():
