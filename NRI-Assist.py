@@ -56,7 +56,7 @@ try:
             doc_ref = db.collection('users').document(st.session_state.email)
             doc_ref.set(user_info)
 except Exception as e:
-    os.write(1,e)
+    st.write('exception found')
     print(e)
 
 
