@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(page_title="About", page_icon="🇮🇳")
 
-st.header("About Me",divider='rainbow')
+st.header("My Story",divider='rainbow')
 
 col1, col2, col3 = st.columns([1.3 ,0.2, 1])
 
