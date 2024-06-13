@@ -84,7 +84,7 @@ try:
                 st.rerun()
 except Exception as e:
     st.write('exception found ')
-    st.write(str(e))
+    st.write(repr(e))
 
 st.title("NRI Assist 🇺🇸 👉 🇮🇳") 
 st.write("I am Arvind's AI agent.")
