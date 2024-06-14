@@ -15,7 +15,7 @@ with col1:
         st.write(f.read())
     
     url = 'https://www.linkedin.com/in/arvindna/'
-    st.markdown(f"Feel free to reach out with questions or feedback : ")
+    st.markdown(f"So please feel free to reach out to me directly with :orange[questions] or :orange[feedback] : ")
     # st.markdown(f"###### 🔗 Linkedin: [link](%s)"% url)
     st.markdown(f"###### 🔗 Linkedin: {url}")
     
