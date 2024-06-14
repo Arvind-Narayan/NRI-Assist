@@ -10,6 +10,9 @@ from openai.types.beta.assistant_stream_event import ThreadMessageDelta
 from openai.types.beta.threads.text_delta_block import TextDeltaBlock 
 
 st.set_page_config(page_title="NRI-Assist", page_icon="🇮🇳")
+#Hide header
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Initialize Firebase app
 fb_creds = dict(st.secrets["firebase"]['creds'])
