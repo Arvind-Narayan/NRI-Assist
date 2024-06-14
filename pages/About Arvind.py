@@ -11,7 +11,7 @@ with col1:
              psum lorem  psum lorem  psum lorem  psum lorem  psum lorem ')
     
     url = 'https://www.linkedin.com/in/arvindna/'
-    st.markdown(f"Feel free to reach out : ")
+    st.markdown(f"Feel free to reach out with questions or feedback : ")
     # st.markdown(f"###### 🔗 Linkedin: [link](%s)"% url)
     st.markdown(f"###### 🔗 Linkedin: {url}")
     
