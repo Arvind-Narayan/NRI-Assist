@@ -3,16 +3,16 @@ import streamlit as st
 
 st.set_page_config(page_title="About", page_icon="🇮🇳")
 
-#hide
-# Add custom CSS to hide the GitHub icon
-# st.markdown(
-#     """
-#     <style>
-#     #MainMenu {visibility: hidden;}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
+# custom CSS to hide mainmenu and header
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.header("My Story",divider='rainbow')
 
