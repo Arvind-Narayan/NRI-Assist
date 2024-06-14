@@ -3,16 +3,6 @@ import streamlit as st
 
 st.set_page_config(page_title="About", page_icon="🇮🇳")
 
-# custom CSS to hide mainmenu and header
-# st.markdown(
-#     """
-#     <style>
-#     #MainMenu {visibility: hidden;}
-#     header {visibility: hidden;}
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
