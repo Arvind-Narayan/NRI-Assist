@@ -1,6 +1,10 @@
 import streamlit as st
+from utils import hide_github_icon
 
 st.set_page_config(page_title="About", page_icon="🇮🇳")
+
+#hide
+hide_github_icon()
 
 st.header("My Story",divider='rainbow')
 
