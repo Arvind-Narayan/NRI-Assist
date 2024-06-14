@@ -49,14 +49,4 @@ def update_db(collection, role, content, msg_count):
         collection.update({'msg_count' : msg_count+1})
 
 def hide_github_icon():
-    return st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True)
+    return 
