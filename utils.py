@@ -47,6 +47,3 @@ def update_db(collection, role, content, msg_count):
 
     if role == 'user':
         collection.update({'msg_count' : msg_count+1})
-
-def hide_github_icon():
-    return 

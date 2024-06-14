@@ -4,17 +4,10 @@ import streamlit as st
 st.set_page_config(page_title="About", page_icon="🇮🇳")
 
 #hide
-st.markdown(
-    """
-    <style>
-    .css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob,
-    .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137,
-    .viewerBadge_text__1JaDK {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True)
+hide_github_icon = """
+.css-1jc7ptx, .e1ewe7hr3, .viewerBadge_container__1QSob, .styles_viewerBadge__1yB5_, .viewerBadge_link__1S137, .viewerBadge_text__1JaDK{ display: none; } #MainMenu{ visibility: hidden; } footer { visibility: hidden; } header { visibility: hidden; }
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 
 st.header("My Story",divider='rainbow')
 
