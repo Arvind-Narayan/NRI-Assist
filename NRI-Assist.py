@@ -67,7 +67,7 @@ def show_login_button():
         scope=["email", "profile"],
         extras_params={"access_type": "offline"},
     ))
-    st.link_button("Login", authorization_url)
+    st.link_button(":red[Login]", authorization_url)
 
     get_logged_in_user_email(goa_client, redirect_url)
 
