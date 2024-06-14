@@ -84,7 +84,7 @@ with st.sidebar:
             print('button if statement ')
             st.session_state.email = ''
             st.rerun()
-    st.write('⚠️ The AI model may sometimes generate incorrect information; verify independently.')
+    st.write('⚠️ The AI model may sometimes generate incorrect information; pls verify independently.')
     
 
 
