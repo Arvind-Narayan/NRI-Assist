@@ -16,7 +16,7 @@ with col1:
     st.markdown(f"###### 🔗 Linkedin: {url}")
     
 with col3:
-    st.image("./img_arv.jpeg", width=360)
+    st.image("./img_arv.jpeg", width=300)
 
 
 # st.image('./img_arv.jpeg', width = 500 )
