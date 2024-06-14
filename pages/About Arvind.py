@@ -8,10 +8,7 @@ st.set_page_config(page_title="About", page_icon="🇮🇳")
 st.markdown(
     """
     <style>
-    .st-emotion-cache-ch5dnh ef3psqc5{
-        display: none;
-        visibility: hidden;
-    }
+    #MainMenu {visibility: hidden;}
     </style>
     """,
     unsafe_allow_html=True
