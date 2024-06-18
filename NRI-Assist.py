@@ -85,7 +85,7 @@ with st.sidebar:
             st.session_state.email = ''
             st.rerun()
 
-        st.write('🔍 :grey[The AI model may sometimes generate incorrect information; please verify independently.]')
+        st.write('🔍 :grey[The AI model may sometimes hallucinate; please verify independently.]')
     
     
     
