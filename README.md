@@ -12,5 +12,5 @@ Checkout : https://nri-assist.streamlit.app/
 
 ## Demo
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/b2964f5263ea47b683eb212ece290791-1719306457166-with-play.gif)]([https://youtu.be/eZ8NjFMM_Ns](https://www.loom.com/share/b2964f5263ea47b683eb212ece290791?sid=e42567db-f4ed-41f2-97c9-818e0bd1562f))
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/b2964f5263ea47b683eb212ece290791-1719306457166-with-play.gif)](https://www.loom.com/share/b2964f5263ea47b683eb212ece290791?sid=e42567db-f4ed-41f2-97c9-818e0bd1562f))
 
