@@ -12,4 +12,5 @@ Checkout : https://nri-assist.streamlit.app/
 
 ## Demo
 
-https://www.loom.com/share/b2964f5263ea47b683eb212ece290791?sid=a1df1fbc-b449-4f99-bf93-5c443e194007
+[![Watch the video](https://cdn.loom.com/sessions/thumbnails/b2964f5263ea47b683eb212ece290791-1719306457166-with-play.gif)](https://youtu.be/eZ8NjFMM_Ns)![image](https://github.com/Arvind-Narayan/NRI-Assist/assets/6925673/26cbde5b-15d3-4a2b-9931-99f9b2744e91)
+
